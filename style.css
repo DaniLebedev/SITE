@@ -1,0 +1,431 @@
+/* ========== ОБЩИЕ СТИЛИ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    color: #222;
+    background-color: #f7f7f7;
+    line-height: 1.5;
+}
+
+/* Контейнер для центрирования контента */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========== ХЕДЕР ========== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 5%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.nav a:hover {
+    color: #0078ff;
+    -webkit-text-stroke: 1px #0078ff;
+    font-size: 1.1rem;
+}
+
+.nav a.active {
+    color: #0078ff;
+    font-weight: 600;
+}
+
+.nav a.active:hover {
+    color: #fff;
+    -webkit-text-stroke: 1px #0078ff;
+    font-size: 1.1rem;
+}
+
+/* ========== HERO ========== */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+
+.black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    top: 5%;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    white-space: pre-wrap;
+}
+
+/* ========== СЕКЦИИ ========== */
+section {
+    padding: 80px 0;
+}
+
+#about,
+#partners {
+    background: #fff;
+    margin-bottom: 50px;
+}
+
+#services {
+    background: #e9eef5;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 20px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    background-color: #fff;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    &:hover
+    {
+        scale: 1.05;
+    }
+
+}
+
+/* ========== ФУТЕР ========== */
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 60px 0;
+}
+
+.footer-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-column p,
+.footer-column a {
+    color: #aaa;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+#burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+    /* чтобы был поверх навигации */
+}
+
+#burger div {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ========== ABOUT (НАШИ КОМАНДЫ) ========== */
+#about {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.sect-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sect-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.sect-text h2::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: #0078ff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Контейнер карточек */
+.comands-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Каждая карточка */
+.card {
+    background: #fefefe;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Фото */
+.img-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .img-container img {
+    transform: scale(1.05);
+}
+
+/* Контент карточки */
+.card .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card .content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Кнопка */
+.card button {
+    margin: 15px 20px 25px;
+    padding: 10px 0;
+    border: none;
+    background: #0078ff;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #005fcc;
+}
+
+/* ========== АДАПТИВ ========== */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 15px 20px;
+    }
+
+    header .nav.active {
+        box-shadow: none;
+    }
+
+    .logo {
+        z-index: 11;
+    }
+
+    .nav {
+        position: fixed;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition:
+            opacity 0.4s ease,
+            transform 0.4s ease;
+        z-index: 10;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0);
+        display: flex;
+    }
+
+    .nav.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+        padding: 20px 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    #burger {
+        display: flex;
+    }
+
+    #burger.active div:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    #burger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #burger.active div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .comands-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .sect-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-main-content {
+        flex-direction: column;
+    }
+    .reviews
+    {
+        grid-template-columns: 1fr;
+    }
+    .review
+    {
+        gap: 40px;
+    }
+}
+
+#main {
+    padding: 0;
+}
+
+@keyframes OPEN {
+    0% {
+        max-height: 0;
+        padding: 0;
+    }
+
+    100% {
+        max-height: fit-content;
+        padding: 20px 0;
+
+    }
+}
