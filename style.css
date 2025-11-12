@@ -343,7 +343,6 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 25px;
-        padding-top: 75px;
         opacity: 0;
         transform: translateY(-50px);
         pointer-events: none;
@@ -360,8 +359,10 @@ footer {
         transform: translateY(0);
         pointer-events: all;
         padding: 20px 0;
-        padding-top: 75px;
-
+        &:first-child
+        {
+            padding-top: 75px;
+        }
     }
 
     .nav ul {
