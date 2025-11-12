@@ -18,10 +18,11 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
-.full-container
-{
+
+.full-container {
     width: 100%;
 }
+
 /* ========== ХЕДЕР ========== */
 header {
     display: flex;
@@ -151,8 +152,8 @@ section {
     background-color: #fff;
     border-radius: 12px;
     transition: all 0.3s ease;
-    &:hover
-    {
+
+    &:hover {
         scale: 1.05;
     }
 
@@ -334,7 +335,7 @@ footer {
 
     .nav {
         position: fixed;
-        top: 75px;
+        top: 0;
         left: 0;
         width: 100%;
         background: #fff;
@@ -342,7 +343,7 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 25px;
-        padding: 0;
+        padding-top: 75px;
         opacity: 0;
         transform: translateY(-50px);
         pointer-events: none;
@@ -359,6 +360,8 @@ footer {
         transform: translateY(0);
         pointer-events: all;
         padding: 20px 0;
+        padding-top: 75px;
+
     }
 
     .nav ul {
@@ -403,12 +406,12 @@ footer {
     .footer-main-content {
         flex-direction: column;
     }
-    .reviews
-    {
+
+    .reviews {
         grid-template-columns: 1fr;
     }
-    .review
-    {
+
+    .review {
         gap: 40px;
     }
 }
