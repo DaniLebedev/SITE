@@ -33,6 +33,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    height: 10%;
 }
 
 .logo {
@@ -336,7 +337,7 @@ footer {
 
     .nav {
         position: fixed;
-        top: 0%;
+        top: 7%;
         left: 0;
         width: 100%;
         background: #fff;
