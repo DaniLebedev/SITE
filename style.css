@@ -361,7 +361,7 @@ footer {
         padding: 20px 0;
         
     }
-    .nav.nav.active:first-child
+    .first
     {
             padding-top: 75px;
     }
