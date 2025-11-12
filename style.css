@@ -327,9 +327,6 @@ footer {
         padding: 15px 20px;
     }
 
-    header .nav.active {
-        box-shadow: none;
-    }
 
     .logo {
         z-index: 11;
