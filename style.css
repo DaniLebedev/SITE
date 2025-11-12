@@ -344,6 +344,7 @@ footer {
     }
 
     .nav {
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
@@ -363,7 +364,6 @@ footer {
 
     .nav.active {
         opacity: 1;
-        display: flex;
         pointer-events: all;
         transform: translateY(0);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
