@@ -333,7 +333,7 @@ footer {
 
     .nav {
         position: fixed;
-        top: 8%;
+        top: 0%;
         left: 0;
         width: 100%;
         background: #fff;
@@ -343,7 +343,7 @@ footer {
         gap: 25px;
         padding: 0;
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-50px);
         pointer-events: none;
         transition:
             opacity 0.4s ease,
