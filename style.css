@@ -334,7 +334,7 @@ footer {
 
     .nav {
         position: fixed;
-        top: 7%;
+        top: 75px;
         left: 0;
         width: 100%;
         background: #fff;
