@@ -127,7 +127,7 @@ section {
 #about,
 #partners {
     background: #fff;
-    margin-bottom: 50px;
+    margin-bottom: var(--star-distance);
 }
 
 #services {
@@ -211,12 +211,12 @@ footer {
 /* ========== ABOUT (НАШИ КОМАНДЫ) ========== */
 #about {
     background: #fff;
-    padding: 100px 0;
+    padding: var(--star-distance) 0;
 }
 
 .sect-text {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--star-distance);
 }
 
 .sect-text h2 {
@@ -322,6 +322,390 @@ li {
     justify-content: center;
 }
 
+
+
+#main {
+    padding: 0;
+}
+
+@keyframes OPEN {
+    0% {
+        max-height: 0;
+        padding: 0;
+    }
+
+    100% {
+        max-height: fit-content;
+        padding: 20px 0;
+
+    }
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.icon {
+    width: var(--star-distance);
+    height: var(--star-distance);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    animation: fade-in 1s ease forwards;
+}
+
+.icon:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.icon:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.icon:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.icon:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.icon:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+
+.icon:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 8px #000);
+}
+
+.moon {
+    background-color: #ffd64e;
+    border-radius: 50%;
+    padding: 20px;
+    color: var(--color-m-w);
+}
+
+.moon:hover {
+    animation: mooons 2s ease infinite;
+}
+
+.sun {
+    background-color: #ffff00;
+    color: #b67c00;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.sun:hover {
+    animation: sans 20s ease forwards;
+}
+
+.heart {
+    background-color: #ffa8b9;
+    color: #ff4545;
+    border-radius: 45%;
+    padding: 20px;
+    animation: tuc 2s ease infinite;
+}
+
+
+.gear {
+    background-color: #acacac;
+    color: #5e5e5e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.gear:hover {
+    animation: rotatess 2s ease infinite;
+}
+
+.star {
+    background-color: #00325c;
+    color: #fff;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.star.fly {
+    animation: stars 3s ease-in-out forwards;
+}
+
+
+.draw {
+    stroke: currentColor;
+    fill: none;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    transition: stroke 15s ease;
+    pointer-events: none;
+}
+
+.icon:hover .draw {
+    animation: draw 15s linear forwards;
+}
+
+.my-icon {
+    .my-circle {
+        color: #0000ff;
+    }
+
+    .my-line {
+        color: #ff0000;
+    }
+
+    overflow: auto;
+}
+
+.my-icon:hover {
+    .my-circle {
+        animation: circles 2s ease infinite;
+    }
+
+    .my-line {
+        animation: lines 2s ease infinite;
+    }
+}
+
+@keyframes circles {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+@keyframes lines {
+    0% {
+        transform: skewX(0deg);
+
+    }
+
+    50% {
+        transform: skewX(90deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+
+    }
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotatess {
+    0% {
+        transform: rotate(90deg);
+        border-radius: 10px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(90deg);
+        border-radius: 50%;
+
+    }
+}
+
+@keyframes tuc {
+    0% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px #ffe6eb);
+
+    }
+
+    50% {
+        transform: scale(1);
+
+    }
+
+    100% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px #ffe6eb);
+
+
+    }
+}
+
+
+@keyframes sans {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 8px #ffff00);
+
+    }
+
+    10% {
+        transform: scale(1.2);
+        background-color: transparent;
+        color: #ffff00;
+    }
+
+    100% {
+        transform: scale(2);
+        rotate: 36000000deg;
+        background-color: transparent;
+        color: #ffff00;
+    }
+}
+
+@keyframes mooons {
+    0% {
+        transform: skewX(0deg) skewY(0deg);
+        color: var(--color-m-b);
+    }
+
+    10% {
+        transform: skewX(30deg) skewY(0deg);
+        color: var(--color-m-w);
+    }
+
+    20% {
+        transform: skewX(0deg) skewY(30deg);
+        color: var(--color-m-b);
+    }
+
+    30% {
+        transform: skewX(-30deg) skewY(0deg);
+        color: var(--color-m-w);
+    }
+
+    40% {
+        transform: skewX(0deg) skewY(-30deg);
+        color: var(--color-m-b);
+    }
+
+    50% {
+        transform: skewX(30deg) skewY(30deg);
+        color: var(--color-m-w);
+    }
+
+    60% {
+        transform: skewX(30deg) skewY(-30deg);
+        color: var(--color-m-b);
+    }
+
+    70% {
+        transform: skewX(-30deg) skewY(30deg);
+        color: var(--color-m-w);
+    }
+
+    80% {
+        transform: skewX(-30deg) skewY(-30deg);
+        color: var(--color-m-b);
+    }
+
+    90% {
+        transform: skewX(15deg) skewY(15deg);
+        color: var(--color-m-w);
+    }
+
+    100% {
+        transform: skewX(0deg) skewY(0deg);
+        color: var(--color-m-b);
+    }
+}
+
+:root {
+    --color-m-w: #d35f00;
+    --color-m0b: #523c00;
+    --star-distance: 150px;
+    /* вот, задаём реальное смещение */
+}
+
+@keyframes stars {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translateX(calc(var(--star-distance) * 0.5));
+    }
+
+    20% {
+        transform: translateY(calc(var(--star-distance) * 0.7));
+    }
+
+    30% {
+        transform: translate(calc(var(--star-distance) * -0.6), calc(var(--star-distance) * 0.3));
+    }
+
+    40% {
+        transform: translate(calc(var(--star-distance) * 0.2), calc(var(--star-distance) * -0.8));
+    }
+
+    50% {
+        transform: translate(var(--star-distance), var(--star-distance));
+    }
+
+    60% {
+        transform: translate(calc(var(--star-distance) * -0.8), var(--star-distance));
+    }
+
+    70% {
+        transform: translate(var(--star-distance), calc(var(--star-distance) * -0.8));
+    }
+
+    80% {
+        transform: translate(calc(var(--star-distance) * -0.8), calc(var(--star-distance) * -0.6));
+    }
+
+    90% {
+        transform: translate(calc(var(--star-distance) * 0.4), calc(var(--star-distance) * -0.4));
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+:root {
+    --color-m-w: #d35f00;
+    --color-m0b: #523c00;
+    --star-distance: 100px;
+}
+
+
 /* ========== АДАПТИВ ========== */
 @media (max-width: 768px) {
     header {
@@ -424,21 +808,10 @@ li {
     .review {
         gap: 40px;
     }
-}
-
-#main {
-    padding: 0;
-}
-
-@keyframes OPEN {
-    0% {
-        max-height: 0;
-        padding: 0;
-    }
-
-    100% {
-        max-height: fit-content;
-        padding: 20px 0;
-
+    .icon
+    {
+        width: 75px;
+        height: 75px;
+        padding: 10px;
     }
 }
