@@ -1,0 +1,3 @@
+я научился использовать querySelector, это почти основа основ и лучше getElementById или getElementsByClassName.
+Еще узнал о addEventListener с которым можно назначить действие на клик или другое действие.
+Узнал о innerHTML и Child операторами

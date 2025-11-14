@@ -129,7 +129,17 @@ section {
     background: #fff;
     margin-bottom: var(--star-distance);
 }
-
+#partners .sect-text
+{
+    margin-bottom: 10px;
+}
+.btn-container
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
 #services {
     background: #e9eef5;
 }
@@ -217,6 +227,10 @@ footer {
 .sect-text {
     text-align: center;
     margin-bottom: var(--star-distance);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .sect-text h2 {
@@ -697,7 +711,30 @@ li {
 }
 
 
-
+.btn-plus {
+    width: 40px;
+    height: 40px;
+    background-color: #0078ff;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn-minus {
+    width: 40px;
+    height: 40px;
+    background-color: #ee0e0e;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
 
 :root {
     --color-m-w: #d35f00;
